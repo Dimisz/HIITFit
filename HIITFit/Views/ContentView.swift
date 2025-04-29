@@ -11,12 +11,12 @@ struct ContentView: View {
     var body: some View {
         TabView {
             WelcomeView()
-            ExerciseView(index: 0)
-            Text("Exercise 2")
+            ForEach(0..<4){
+                ExerciseView(index: $0)
+            }
         }
         .padding()
-        .tabViewStyle(PageTabViewStyle())
-        .indexViewStyle(PageIndexViewStyle(backgroundDisplayMode: .always))
+        .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
     }
 }
 
