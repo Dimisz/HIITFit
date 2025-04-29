@@ -10,8 +10,8 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         TabView {
-            Text("Hello, world!")
-            Text("Exercise 1")
+            WelcomeView()
+            ExerciseView(index: 0)
             Text("Exercise 2")
         }
         .padding()
